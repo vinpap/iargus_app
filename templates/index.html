@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>IArgus</title>
+  </head>
+  <body>
+    
+    <header>
+        <nav class="container">
+            <ul>
+            <li><img src={{ url_for('static', filename='logo_light.png') }} /></li>
+            </ul>
+            <ul>
+            <li><a href="#" class="contrast">Price estimate</a></li>
+            <li><a href="/about" class="secondary">About</a></li>
+            <li><a href="/contact" class="secondary">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container demo-wrap">
+        <img
+            class="demo-bg"
+            src="https://assets.digitalocean.com/labs/images/community_bg.png"
+            alt=""
+        >
+        <form>
+            <fieldset role="search">
+              <input name="email" type="email" placeholder="Email" autocomplete="email" />
+              <input name="password" type="password" placeholder="Password" />
+              <input type="submit" value="Log in" />
+            </fieldset>
+          </form>
+    </main>
+    <footer class="container-fluid">
+        IArgus © 2024
+    </footer>
+  </body>
+</html>
