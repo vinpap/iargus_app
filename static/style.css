@@ -11,6 +11,25 @@ body>footer {
     min-height: 100%;
     flex-grow: 1;
 }
+.main-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+    max-width: 50%;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+
+    }
+.align-in-middle {
+    text-align:center;
+}
+.inner-img {
+    max-width: 40%;
+    max-height: 40%;
+}
 
 body {
     display: flex;
@@ -18,20 +37,4 @@ body {
     height: 100%;
 }
 
-.demo-wrap {
-    overflow: hidden;
-    position: relative;
-  }
-  
-.demo-bg {
-    opacity: 0.6;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-.demo-content {
-    position: relative;
-  }
+

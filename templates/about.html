@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href={{ url_for('static', filename='favicon.ico') }}/>
+    <title>IArgus</title>
+  </head>
+  <body>
+    
+    <header>
+        <nav class="container-fluid">
+            <ul>
+            <li><img src={{ url_for('static', filename='logo_light.png') }} /></li>
+            </ul>
+            <ul>
+            <li><a href="/" class="secondary">Price estimate</a></li>
+            <li><a href="#" class="contrast">About</a></li>
+            <li><a href="/contact" class="secondary">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <p>
+            IArgus is a free service that enables you to instantly find the best price for a used car. Whether you want to buy or sell, our AI-enabled tool will calculate the ideal price for you!
+        </p>
+        <p>
+            Our AI was built using thousands of car sales records all over the U.S. and learnt how to identify the fairest price for a sale based on factors such as the make, the model, and the car's mileage. 
+
+            
+        </p>
+        <p>
+            <b>DISCLAIMER: </b>IArgus is provided for information purposes only. In no circumstances should the data it generates be used as financial advice. IArgus declines any and all losses resulting of the use of the estimates provided by this website.
+        </p>
+        <p class="align-in-middle"> 
+            <img src={{ url_for('static', filename='used_cars.jpg') }} class="inner-img"/>
+        </p>
+        
+    </main>
+    <footer class="container-fluid">
+        IArgus © 2024
+    </footer>
+  </body>
+</html>

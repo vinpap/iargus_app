@@ -6,12 +6,13 @@
     <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href={{ url_for('static', filename='favicon.ico') }}/>
     <title>IArgus</title>
   </head>
   <body>
     
     <header>
-        <nav class="container">
+        <nav class="container-fluid">
             <ul>
             <li><img src={{ url_for('static', filename='logo_light.png') }} /></li>
             </ul>
@@ -22,17 +23,91 @@
             </ul>
         </nav>
     </header>
-    <main class="container demo-wrap">
-        <img
-            class="demo-bg"
-            src="https://assets.digitalocean.com/labs/images/community_bg.png"
-            alt=""
-        >
+    <main class="container">
+      
         <form>
-            <fieldset role="search">
-              <input name="email" type="email" placeholder="Email" autocomplete="email" />
-              <input name="password" type="password" placeholder="Password" />
-              <input type="submit" value="Log in" />
+            <fieldset class="main-form">
+              <h1 class="align-in-middle">Find out the right price for your car!</h1>
+              <div>
+                <small id="make-helper">Make</small>
+                <input name="make" type="text" placeholder="make" aria-describedby="make-helper" />
+              </div>
+              <div>
+                <small id="model-helper">Model</small>
+                <input name="model" type="text" placeholder="model" aria-describedby="model-helper"/>
+              </div>
+              <div>
+                <small id="year-helper">Manufacturing year</small>
+                <input name="year" type="number" placeholder="year" aria-describedby="year-helper"/>
+              </div>
+              <div>
+                <small id="mileage-helper">Mileage</small>
+                <input name="mileage" type="number" placeholder="mileage" aria-describedby="mileage-helper"/>
+              </div>
+              <div>
+                <small id="state-helper">State where the car has been bought</small>
+                <select name="state" aria-label="Select" aria-describedby="state-helper" required>
+                  <option selected disabled value="">Select</option>
+                  <option>AL|Alabama</option>
+                  <option>AK|Alaska</option>
+                  <option>AZ|Arizona</option>
+                  <option>AR|Arkansas</option>
+                  <option>CA|California</option>
+                  <option>CO|Colorado</option>
+                  <option>CT|Connecticut</option>
+                  <option>DE|Delaware</option>
+                  <option>FL|Florida</option>
+                  <option>GA|Georgia</option>
+                  <option>HI|Hawaii</option>
+                  <option>ID|Idaho</option>
+                  <option>IL|Illinois</option>
+                  <option>IN|Indiana</option>
+                  <option>IA|Iowa</option>
+                  <option>KS|Kansas</option>
+                  <option>KY|Kentucky</option>
+                  <option>LA|Louisiana</option>
+                  <option>ME|Maine</option>
+                  <option>MD|Maryland</option>
+                  <option>MA|Massachusetts</option>
+                  <option>MI|Michigan</option>
+                  <option>MN|Minnesota</option>
+                  <option>MS|Mississippi</option>
+                  <option>MO|Missouri</option>
+                  <option>MT|Montana</option>
+                  <option>NE|Nebraska</option>
+                  <option>NV|Nevada</option>
+                  <option>NH|New Hampshire</option>
+                  <option>NJ|New Jersey</option>
+                  <option>NM|New Mexico</option>
+                  <option>NY|New York</option>
+                  <option>NC|North Carolina</option>
+                  <option>ND|North Dakota</option>
+                  <option>OH|Ohio</option>
+                  <option>OK|Oklahoma</option>
+                  <option>OR|Oregon</option>
+                  <option>PA|Pennsylvania</option>
+                  <option>RI|Rhode Island</option>
+                  <option>SC|South Carolina</option>
+                  <option>SD|South Dakota</option>
+                  <option>TN|Tennessee</option>
+                  <option>TX|Texas</option>
+                  <option>UT|Utah</option>
+                  <option>VT|Vermont</option>
+                  <option>VA|Virginia</option>
+                  <option>WA|Washington</option>
+                  <option>WV|West Virginia</option>
+                  <option>WI|Wisconsin</option>
+                  <option>WY|Wyoming</option>
+                  <option>DC|District of Columbia</option>
+                  <option>AS|American Samoa</option>
+                  <option>GU|Guam</option>
+                  <option>MP|Northern Mariana Islands</option>
+                  <option>PR|Puerto Rico</option>
+                  <option>UM|United States Minor Outlying Islands</option>
+                  <option>VI|Virgin Islands, U.S.</option>false
+                </select>
+              </div>
+              <input type="submit" value="Estimate the price" />
             </fieldset>
           </form>
     </main>
