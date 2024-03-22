@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="icon" type="image/x-icon" href={{ url_for('static', filename='favicon.ico') }}/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href={{ url_for('static', filename='img/favicon.ico') }}/>
     <title>IArgus</title>
   </head>
   <body>
@@ -14,7 +14,7 @@
     <header>
         <nav class="container-fluid">
             <ul>
-            <li><img src={{ url_for('static', filename='logo_light.png') }} /></li>
+            <li><img src={{ url_for('static', filename='img/logo_light.png') }} /></li>
             </ul>
             <ul>
             <li><a href="/" class="secondary">Price estimate</a></li>

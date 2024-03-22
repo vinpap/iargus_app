@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="icon" type="image/x-icon" href={{ url_for('static', filename='favicon.ico') }}/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href={{ url_for('static', filename='img/favicon.ico') }}/>
     <title>IArgus</title>
   </head>
   <body>
@@ -14,7 +14,7 @@
     <header>
         <nav class="container-fluid">
             <ul>
-            <li><img src={{ url_for('static', filename='logo_light.png') }} /></li>
+            <li><img src={{ url_for('static', filename='img/logo_light.png') }} /></li>
             </ul>
             <ul>
             <li><a href="#" class="contrast">Price estimate</a></li>
@@ -24,25 +24,24 @@
         </nav>
     </header>
     <main class="container">
-      
-        <form>
+        <form id="estimate-form" action="/estimate_results" method="post">
             <fieldset class="main-form">
               <h1 class="align-in-middle">Find out the right price for your car!</h1>
               <div>
                 <small id="make-helper">Make</small>
-                <input name="make" type="text" placeholder="make" aria-describedby="make-helper" />
+                <input name="make" type="text" placeholder="make" aria-describedby="make-helper" required/>
               </div>
               <div>
                 <small id="model-helper">Model</small>
-                <input name="model" type="text" placeholder="model" aria-describedby="model-helper"/>
+                <input name="model" type="text" placeholder="model" aria-describedby="model-helper" required/>
               </div>
               <div>
                 <small id="year-helper">Manufacturing year</small>
-                <input name="year" type="number" placeholder="year" aria-describedby="year-helper"/>
+                <input name="year" type="number" placeholder="year" aria-describedby="year-helper" required/>
               </div>
               <div>
                 <small id="mileage-helper">Mileage</small>
-                <input name="mileage" type="number" placeholder="mileage" aria-describedby="mileage-helper"/>
+                <input name="mileage" type="number" placeholder="mileage" aria-describedby="mileage-helper" required/>
               </div>
               <div>
                 <small id="state-helper">State where the car has been bought</small>
@@ -107,12 +106,17 @@
                   <option>VI|Virgin Islands, U.S.</option>false
                 </select>
               </div>
-              <input type="submit" value="Estimate the price" />
+              <button id="spin-btn">
+                <input id="form-btn" type="submit" value="Estimate the price"/>
+              </button>
+              
             </fieldset>
           </form>
-    </main>
+        
+        </main>
     <footer class="container-fluid">
         IArgus © 2024
     </footer>
   </body>
+  <script src="{{ url_for('static', filename='js/price_estimate.js') }}"></script>
 </html>
