@@ -1,2 +1,5 @@
 api:
-  prediction_endpoint: https://127.0.0.1:8000/predict
+  prediction_endpoint: https://vincent-iargus.azurewebsites.net
+  admin_first_name: John
+  admin_surname: Admin
+  admin_email: admin@mail.com
